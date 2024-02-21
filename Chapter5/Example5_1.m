@@ -21,11 +21,11 @@ Y2 = [1 1 -1 -1 1 1];
 
 % (c) Check the correctness of recalls of the complementary pattern pairs.
 
-    % Forward recalls:
+    % Complementary forward recalls:
     y1c = Gh(-X1, W)
     y2c = Gh(-X2, W)
     
-    % Backward recalls:
+    % Complementary backward recalls:
     x1c = Gh(-Y1, W')
     x2c = Gh(-Y2, W')
 
