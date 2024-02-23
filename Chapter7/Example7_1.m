@@ -66,12 +66,11 @@ Y4 = [X4*W1', X4*W2']
 function [W1,W2] = iteration(i,X,W1,W2,g)
     d1 = squared_euclidean_distance(X, W1);
     d2 = squared_euclidean_distance(X, W2);
-    if d1<d2
+    D = [d1 d2];
+    if d1 == min(D)
         W1 = update_weight(i, 1, X, W1, g);
-    elseif d2<d1
-        W2 = update_weight(i, 2, X, W2, g);
-    else
-        W1 = update_weight(i, 1, X, W1, g);
+    end
+    if d2 == min(D)
         W2 = update_weight(i, 2, X, W2, g);
     end
 end
