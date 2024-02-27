@@ -24,14 +24,14 @@ W2 = w2;
 W3 = w3;
 W4 = w4;
 g_1 = 0.5;
-[W1,W2,W3,W4] = iteration(1,X1,W1,W2,W3,W4,g_1);
-[W1,W2,W3,W4] = iteration(2,X2,W1,W2,W3,W4,g_1);
-[W1,W2,W3,W4] = iteration(3,X3,W1,W2,W3,W4,g_1);
-[W1,W2,W3,W4] = iteration(4,X4,W1,W2,W3,W4,g_1)
+[W11,W21,W31,W41] = iteration(1,X1,W1,W2,W3,W4,g_1);
+[W12,W22,W32,W42] = iteration(2,X2,W1,W2,W3,W4,g_1);
+[W13,W23,W33,W43] = iteration(3,X3,W1,W2,W3,W4,g_1);
+[W14,W24,W34,W44] = iteration(4,X4,W1,W2,W3,W4,g_1);
 
 % (b) On the 2-dimensional plane, plot the movement of each of the four centers by joining the initial center to the final center by an arrow.
 
-plotCenters(w1,w2,w3,w4,W1,W2,W3,W4);
+plotCenters(w1,w2,w3,w4,W11,W22,W33,W44);
 
 
 function [W1,W2,W3,W4] = iteration(i,X,W1,W2,W3,W4,g)
