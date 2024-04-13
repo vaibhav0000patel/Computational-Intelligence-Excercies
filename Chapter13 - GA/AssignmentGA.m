@@ -46,10 +46,17 @@ disp(['Average fitness after reproduction: ', num2str(average_fitness, '%.4f')])
 % Question 2
 
 % Population vector after crossover
-pop = [1.00, 2.00, 3.45, 7.25-3.45, 5.50, 6.50];
+pop = [0.125, 2.875, 2.5, 4.876, 4.876, 6.125];
 
 % Mutation sites (bit positions to mutate)
-mutationSites = [2, 3, 4, 5, 6, 7];
+mutationSites = [
+                -1,-1,-1;
+                -1,5,-1;
+                -1,6,1;
+                -1,-1,-1;
+                -1,-1,-1;
+                -1,-1,-1
+             ];
 
 % Define the quadratic equation e(x) = x^2 - 7*x + 12.25
 e = @(x) x.^2 - 7*x + 12.25;
@@ -60,27 +67,32 @@ f = @(x) 1 ./ (e(x) + 0.001);
 
 
 
-
-
-
 % Convert each individual to binary, mutate, and then convert back to decimal
 mutatedPop = zeros(size(pop));
 
+
 for i = 1:length(pop)
+    
     % Convert the decimal number to binary
     binaryString = decimalToBinary7Bit(pop(i));
+    
     % Mutate the specified bit for the current decimal number
-    mutatedBinaryString = mutateBinaryString(binaryString, mutationSites(i));
+    mutatedBinaryString = binaryString;
+    for j = 1:length(mutationSites(i,:))
+        if (mutationSites(i,j) >= 0)
+            mutatedBinaryString = mutateBinaryString(mutatedBinaryString, mutationSites(i,j));
+        end
+    end
     % Convert the mutated binary back to decimal
-    mutatedPop(i) = binaryToDecimal7Bit(mutatedBinaryString)
+    mutatedPop(i) = binaryToDecimal7Bit(mutatedBinaryString);
 end
 
 % Compute the fitness values for the mutated population
 
-fitnessValues = f(mutatedPop)
+fitnessValues = f(mutatedPop);
 
 % Calculate the average fitness value
-averageFitness = mean(fitnessValues)
+averageFitness = mean(fitnessValues);
 
 % Display the average fitness value
 disp(['The average fitness value of the mutated population is: ', num2str(averageFitness)]);
