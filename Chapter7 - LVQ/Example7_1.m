@@ -14,8 +14,7 @@ T = [1 1 2 2 ];
 
 % Initial weights for LVQ.
 j = 1:2;
-w1 = [ 1 0 0 0 ];
-w2 = [ 0 0 1 0 ];
+z
 
 global C;
 C = [1 2];
