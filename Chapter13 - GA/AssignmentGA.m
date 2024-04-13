@@ -46,16 +46,16 @@ disp(['Average fitness after reproduction: ', num2str(average_fitness, '%.4f')])
 % Question 2
 
 % Population vector after crossover
-pop = [0.125, 2.875, 2.5, 4.876, 4.876, 6.125];
+pop = [1, 2, 3.45, 3.80, 5.50, 6.50];
 
 % Mutation sites (bit positions to mutate)
 mutationSites = [
-                -1,-1,-1;
-                -1,5,-1;
-                -1,6,1;
-                -1,-1,-1;
-                -1,-1,-1;
-                -1,-1,-1
+                2,-1;
+                3,-1;
+                4,-1;
+                5,-1;
+                6,-1;
+                7,-1
              ];
 
 % Define the quadratic equation e(x) = x^2 - 7*x + 12.25
