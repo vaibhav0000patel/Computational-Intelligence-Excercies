@@ -1,3 +1,4 @@
+clc;clear;
 % Example 13.1 (Roulette wheel reproduction of next population)
 % Given a population of six chromosomes with the fitness values specified by 30, 25, 20, 15, 7, and 3. Six random numbers 53, 9, 64, 96, 28, and 82 are generated. Using the roulette wheel reproduction method, determine the chromosomes of the next population (or generation).
 

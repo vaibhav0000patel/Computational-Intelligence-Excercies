@@ -1,3 +1,4 @@
+clc;clear;
 % Example 13.2 (Crossover two parents to generate two children)
 % Given two selected parents A (1011010010) and B (0111100001), use the crossover operator with a crossover probability pc of 1.0 to generate two new children.
 

@@ -1,3 +1,4 @@
+clc;clear;
 % Example 13.4 (Order, length and mutation immunity of schema)
 % Consider the following schemas consisting of 12 bits: (i) ***1*01***0*; (ii) ***1****01**; (iii) *1****1*****; (iv) 00**1*0**1**; (v) *010**110*10.
 % (a) What are the order and length of each of the schemas?
