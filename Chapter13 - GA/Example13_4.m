@@ -42,7 +42,7 @@ function [orders, lengths, survival_probs] = schema_properties(schemas, pm)
         if isempty(fixed_indices)
             lengths(i) = 0;  % No fixed bits means length is 0
         else
-            lengths(i) = fixed_indices(end) - fixed_indices(1) + 1;
+            lengths(i) = fixed_indices(end) - fixed_indices(1);
         end
         
         % Calculate survival probability
