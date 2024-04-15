@@ -20,7 +20,7 @@ clc; clear;
 % Define the matrices R1 and R2
 
 R1 = [0.9 0.7 0.5; 0.6 0.8 0.9];
-R2 = [0.1 0.6; 0.6 0.8; 0.3 1.0];
+R2 = [1.0 0.6; 0.6 0.8; 0.3 1.0];
 
 % Initialize the result matrix for max-min composition
 R1_R2_max_min = zeros(2,2);
